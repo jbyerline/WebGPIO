@@ -1,6 +1,7 @@
 import os, sys, yaml
 
 configPath = os.path.join(sys.path[0], "config.yml")
+print(configPath)
 try:
 	with open(configPath, 'r') as ymlfile:
 	    cfg = yaml.safe_load(ymlfile)
@@ -27,7 +28,7 @@ else:
 	settings = {}
 
 if 'Host' not in settings:
-	settings['Host'] = '0.0.0.0' 
+	settings['Host'] = '192.168.7.25'
 
 if 'Port' not in settings:
 	settings['Port'] = 8000
